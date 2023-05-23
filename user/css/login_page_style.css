@@ -93,7 +93,7 @@ body{
     justify-content: center;
     top:115px;
 }
-.login_button > a > input{
+.login_button > button{
     font-size: 50px;
     width: 894px;
     height: 83px;

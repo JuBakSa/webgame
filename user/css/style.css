@@ -81,9 +81,10 @@ a {
 }
 
 .updown {
-    border: 3px solid #CBCBCB;
+    position: relative;
+    top:-45px;
+    border-left : thick solid #CBCBCB;
     height: 45px;
-    transform: translate(1691px, -122px);
 }
 
 

@@ -27,6 +27,7 @@ app.use(
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
+app.use(express.static('user'));
 
 app.listen(8000, console.log('8000포트로 시작'));
 

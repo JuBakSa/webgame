@@ -1,19 +1,118 @@
-<!-- index.ejs -->
-
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>메인 페이지</title>
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"> <!--CSS 연결-->
+    <title>BlueScreen</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- 폰트 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+
+    </head>
 <body>
-    <% if (username) { %>
-        <h2><%= username %>님, 안녕하세요!</h2>
-        <h3>아이디 = <%= id %></h3>
-        <a href="/logout">로그아웃</a>
-    <% } else { %>
-        <h2>안녕하세요!</h2>
-        <a href="/login">로그인</a>
-        <a href="/register">회원가입</a>
-    <% } %>
+    <!--기본 페이지 div-->
+    <div class="page">
+
+        <!-- Header-->
+        <nav class="navbar">
+            <div class="div navber__logo">
+                <div class = "i">
+                 <a href><img src="img/bluescreen_logo.png"></a>
+                </div>
+            </div>
+    
+            <ui class="navbar__menu">
+              <li><a href="game_board.html">게임</a></li>
+              <li><a href="borad.html">게시판</a></li>
+              <li><a href="announcement.html">공지사항</a></li>
+                <!--배너 안에 있는 로그인 회원가입 정보-->
+                <ui class="login_register">
+                  <% if (username) { %>
+                    <img src="/img/user.png">
+                    <span><%= username %></span>
+                    <p>님, 안녕하세요!</p>
+                    <li><a href="/logout">로그아웃</a></li>
+                <% } else { %>
+                    <li><a href="/login">로그인</a></li>
+                    <li><a href="/register">회원가입</a</li>
+                <% } %>
+                </ui>
+            </ui>
+            <!--로그인과 회원가입 중간에 있는 세로선<-->
+            <div class="updown"></div>
+        </nav>
+
+        <nav class="subbar">
+            <div class="game__join">
+                <a href="game_board.html"><img src="img/game_join.png"></a>
+            </div>
+            <div class="board__join">
+                <a href="borad.html"><img src ="img/board_join.png"></a>
+            </div>
+        </nav>
+
+        <nav class="main_page_board">
+            <div class="left_board">
+                <h1>최근 게시물</h1>
+                <table class="table table-hover">
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><a href = "#">게시판 제목</a></td>
+                        <th scope="row">관리자</th>
+                        <th scope="row">2023-05-12</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td><a href = "#">게시판 제목</a></td>
+                        <th scope="row">관리자</th>
+                        <th scope="row">2023-05-12</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><a href = "#">게시판 제목</a></td>
+                        <th scope="row">관리자</th>
+                        <th scope="row">2023-05-12</th>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+            <div class="right_boaed">
+                <h1>공지사항</h1>
+                <table class="table table-hover">
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><a href = "#">게시판 제목</a></td>
+                        <th scope="row">관리자</th>
+                        <th scope="row">2023-05-12</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td><a href = "#">게시판 제목</a></td>
+                        <th scope="row">관리자</th>
+                        <th scope="row">2023-05-12</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><a href = "#">게시판 제목</a></td>
+                        <th scope="row">관리자</th>
+                        <th scope="row">2023-05-12</th>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </nav>
+        
+    <footer>
+        <div class="footer">
+            <img src="/img/bluescreen_logo.png"> <p>Copyright ⓒ BlueScreen. All rights reserved</p>
+        </div>
+    </footer>
+  
 </body>
 </html>
