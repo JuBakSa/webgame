@@ -1,0 +1,27 @@
+services:
+  node-app:
+    image: shjthink2/webgame:nodejs
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+    networks:
+      - my-network
+  db:
+    image: shjthink2/webgame:mysql
+    environment:
+      - DB_HOST=project-db-1
+      - DB_PORT=3306
+    volumes:
+      - db-data:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  db-data:

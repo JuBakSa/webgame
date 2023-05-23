@@ -1,0 +1,141 @@
+@import url(https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css);
+
+*{
+    font-family: 'NanumGothicLight',sans-serif;
+    font-family: 'NanumGothic',sans-serif;
+    font-family: 'NanumGothicBold',sans-serif;
+    font-family: 'NanumGothicExtraBold',sans-serif;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body{
+    font-size:35px;
+}
+
+.logo{
+    position :relative;
+    top: 150px;
+    text-align: center;
+}
+
+.logo > a > img{
+    width: 309px;
+    height: 71px;
+}
+
+.login_box {
+    position: relative;
+    top:200px;
+    left:433px;
+    text-align: center;
+    width:400px;
+    height: 350px;
+    box-sizing: border-box;
+}
+
+.idpw_info{
+    width: 1055px;
+    height: 406px;
+    border: 1px solid #707070;
+    line-height: 1rem;
+    border-radius: 2.5rem;
+}
+
+.id_box > img{
+    height: 80px;
+    width: 80px;
+}
+
+.id_box{
+    position: relative;
+    top:80px;
+    left:80px;
+    display: flex;
+    width: 894px;
+    height: 85px;
+    border: 1px solid #B7B7B7;
+}
+.id_box > input{
+    font-weight: lighter;
+    width: 840px;
+    height: 85px;
+    outline: none;
+    font-size: 30px;
+}
+.pw_box > img{
+    padding:15px;
+    width: 45px;
+    height: 58px;
+}
+
+.pw_box {
+    position: relative;
+    top:80px;
+    left:80px;
+    display: flex;
+    width: 894px;
+    height: 85px;
+    border: 1px solid #B7B7B7;
+}
+.pw_box > input{
+    font-weight: lighter;
+    width: 840px;
+    height: 85px;
+    outline: none;
+    font-size: 30px;
+}
+.login_button{
+    position: relative;
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+    top:115px;
+}
+.login_button > a > input{
+    font-size: 50px;
+    width: 894px;
+    height: 83px;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    color: white;
+    background-color: #7D84FA;
+}
+
+.login_box > a {
+    font-size: 30px;
+    position: relative;
+    left:780px;
+    top:21px;
+    color: #707070;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.footer{
+    display: flex;
+    margin: 0 auto;
+    position : fixed;
+    bottom : 0; 
+
+}
+.footer > p{
+    color:#828282;
+    position: relative;
+    left:610px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.footer > img{
+    position: relative;
+    left:600px;
+    bottom:8px;
+    width: 136px;
+    height: 31px;
+    
+}
